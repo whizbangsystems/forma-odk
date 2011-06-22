@@ -1,0 +1,32 @@
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceScreen
+		android:summary="@string/click_to_web" android:key="info" android:id="@+id/info" android:title="@string/main_menu_message">
+		<intent
+			android:data="http://www.whizbangsystems.net" android:action="android.intent.action.VIEW"/>
+	</PreferenceScreen>
+	<PreferenceCategory android:title="@string/server_preferences">
+		<EditTextPreference
+			android:dialogTitle="@string/change_username"
+			android:key="username"
+			android:title="@string/username"
+			android:id="@+id/username"/>
+		<EditTextPreference
+			android:dialogTitle="@string/change_password"
+			android:title="@string/password"
+			android:key="password"
+			android:password="true"
+			android:id="@+id/password"/>
+	</PreferenceCategory>
+	<PreferenceCategory
+		android:title="@string/client">
+		<ListPreference
+			android:id="@+id/font_size"
+			android:key="font_size"
+			android:title="@string/font_size"
+			android:dialogTitle="@string/change_font_size"
+			android:defaultValue="21"
+			android:entries="@array/font_size_entries"
+			android:entryValues="@array/font_size_entry_values" />
+	</PreferenceCategory>
+</PreferenceScreen>
