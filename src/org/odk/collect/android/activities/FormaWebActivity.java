@@ -41,6 +41,8 @@ public class FormaWebActivity extends Activity {
             return;
         }
         setContentView(R.layout.forma_web_view);
+        setTitle(getString(R.string.app_name) + " > " + getString(R.string.view_maps));
+
         setupWebView();
     }
     
